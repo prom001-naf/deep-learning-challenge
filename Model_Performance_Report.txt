@@ -1,0 +1,28 @@
+
+Deep Learning Model Performance Report: Alphabet Soup
+
+Overview of the Analysis:
+The purpose of this analysis is to create and evaluate a deep learning model that predicts the success of funding applications for Alphabet Soup. By analyzing various features, the model aims to classify whether an application is successful or not, which will help in allocating resources effectively.
+
+Results:
+
+Data Preprocessing:
+- Target variable(s) for the model: IS_SUCCESSFUL.
+- Feature variable(s) for the model: APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, ASK_AMT.
+- Variables removed from the input data: EIN and NAME (as they do not provide meaningful information for the model).
+
+Compiling, Training, and Evaluating the Model:
+- Model structure: The neural network includes multiple layers:
+  - Input layer with the number of neurons matching the features.
+  - Two hidden layers with 200 and 100 neurons, respectively, using ReLU activation.
+  - Output layer with 1 neuron and a sigmoid activation function for binary classification.
+- Target model performance: The initial model accuracy was below the target (assumed to be 75% or higher).
+- Steps to improve performance:
+  - Experimented with additional hidden layers and neurons.
+  - Tried different activation functions and optimizers.
+  - Increased epochs to allow the model more time to learn.
+  - Applied dropout layers to prevent overfitting.
+
+Summary:
+The deep learning model achieved limited success in classifying the target variable. Although accuracy improved with optimization techniques, it did not reach the desired performance threshold. For a more effective solution, I recommend exploring a Random Forest or Gradient Boosting model, as these algorithms often perform better with structured data and categorical variables.
+
